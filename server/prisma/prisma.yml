@@ -1,0 +1,11 @@
+endpoint: https://us1.prisma.sh/vu-cao-a2dc1e/prisma/dev
+datamodel: datamodel.prisma
+
+# Specifies language & location for the generated Prisma client
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
+
+hooks:
+  post-deploy:
+    - prisma generate
